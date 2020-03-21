@@ -20,17 +20,17 @@ class Application(Frame):
     moods = ["Happy", "Sad", "Neutral", "Annoyed", "Stressed"]
     self.mood_choice.set("Happy")
     self.mood_menu = OptionMenu(self, self.mood_choice, *moods)
-    Label(self, text="Your current mood:").grid(row = 0, column = 0, sticky = W)
+    Label(self, text="Your current mood:", bg="#DF7401").grid(row = 0, column = 0, sticky = W)
     self.mood_menu.grid(row = 0, column = 1, sticky = W)
 
     # Button for getting fortune
     submitBtn = Button(self,
-                       text = "Get My Fortune",
+                       text = "Get My Fortune", bg="#4B8A08",
                        command = self.acquire_fortune
                        ).grid(row = 2, column = 1, sticky = W)
 
     # Text box for fortune
-    self.text_box = Text(self, width = 50, height = 10, bg="black", wrap = WORD)
+    self.text_box = Text(self, width = 50, height = 10, bg="#DF0174", wrap = WORD)
     self.text_box.grid(row = 1, column = 0, columnspan = 2)
 
   def acquire_fortune(self):
